@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+
+
+#BodyContainer {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+#Render {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+}
+
+#RenderImg {
+    width: 100%;
+    object-fit: cover;
+    animation: fade-in 2s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    height: 30%;
+    width: 30%;
+    /* animation: slide-up 1s ease-in-out; */
+}
+
+#ImgTitle {
+    height: 150%;
+    margin-bottom: -20%;
+    margin-left: 10%;
+    animation: fade-in 3s ease-in-out;
+}
+
+#PolarDescription {
+    font-size: 1.8vw;
+    color: rgba(255, 255, 255, 0.779);
+    text-align: end;
+    position: relative;
+    left: 25%;
+    animation: slide-up 5s ease-in-out;
+}
+
+#ShopAllButton {
+    font-size: 1.8vw;
+    background-color: #fff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 170, 255);
+    padding: 6%;
+    position: relative;
+    border-radius: 10px;
+    left: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#ShopAllButton:hover {
+    background-color: #fff;
+    color: rgb(0, 170, 255);
+}
+
+
+
+
+
+#Benefits {
+    position: relative;
+    /* Add position relative */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+}
+
+#BannerBeneficios {
+    width: 100%;
+    height: auto;
+}
+
+#TitleandDescription {
+    position: absolute;
+    /* Add position absolute */
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#BeneficiosTitle {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: -3%;
+    font-weight: bold;
+}
+
+#BeneficiosDescription {
+    font-size: 1.rem;
+    color: white;
+}
+
+#BenefitsLeft {
+    position: absolute;
+    /* Add position absolute */
+    top: 55%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 30vw;
+}
+
+#BenefitsRight {
+    position: absolute;
+    /* Add position absolute */
+    top: 55%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 30vw;
+}
+
+#LogoBenefits {
+    width: 15%;
+    margin-bottom: -3%;
+}
+
+#LogoBenefitsR {
+    width: 15%;
+    margin-bottom: -3%;
+    transform: rotate(270deg);
+
+}
+
+
+
+#BenefitsTitle {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: -1%;
+}
+
+
+#BenefitsDescription {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 7%;
+}
+
+.animate-title {
+    animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-description {
+    animation: fade-in 1s ease-out forwards;
+}
+
+.animate-left {
+    animation: fade-in 3s ease-out forwards;
+}
+
+.animate-right {
+    animation: fade-in 3s ease-out forwards;
+}
+
+.animate-carouse {
+    animation: fade in 2s ease-out forwards;
+}
+
+
+.hide {
+    opacity: 0;
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+#Products {
+    margin-top: 10%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../Fondo.jpg');
+    object-fit: cover;
+}
+
+#ProductsTitle {
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 5%;
+    color: #121212;
+}
+
+#ProductsDescription {
+    font-size: 1.3vw;
+    margin-top: -5%;
+    text-align: center;
+    color: #121212;
+}
+
+#ProductCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+
+}
+
+#divProduct {
+    height: 50vh;
+    margin-top: 15%;
+    position: relative;
+
+}
+
+#fotoProduct1 {
+    height: 120%;
+    width: 75%;
+    margin-top: -15%;
+}
+
+#fotoProduct2 {
+    height: 75%;
+    width: 26%;
+    margin-top: -5%;
+
+}
+
+#fotoProduct3 {
+    height: 80%;
+    width: 28%;
+    margin-top: -5%;
+
+}
+
+.slide-legend {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: 20%;
+    color: #121212;
+}
+
+.slide-legend h3 {
+    font-size: 1.5vw;
+
+}
+
+.slide-legend p {
+    font-size: 1.5vw;
+    margin-top: 0%;
+    font-weight: bold;
+}
+
+
+.custom-arrow-left {
+    align-self: center;
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
+
+.custom-arrow-right {
+    align-self: center;
+    margin-left: 10px;
+    /* Adjust the margin as needed */
+}
+
+
+
+
+
+
+
+
+#Sorteo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+    margin-top: 10%;
+}
+
+
+
+
+
+
+#PolarSocial {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+    margin-top: 10%;
+    z-index: 1;
+}
+
+#SocialsTitle {
+    font-size: 5vw;
+    text-align: center;
+    color: white;
+    margin-top: -2%;
+}
+
+#SocialsDescription {
+    font-size: 1.3vw;
+    margin-top: -5%;
+    text-align: center;
+    color: white;
+}
+
+#IgLogo {
+    background-color: transparent;
+    width: 8%;
+    margin-bottom: -3%;
+}
+
+#DivFotos {
+    height: 50vh;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5%;
+}
+
+#Foto1 {
+    width: 25%;
+}
+
+#Foto2 {
+    width: 25%;
+}
+
+#Foto3 {
+    width: 25%;
+}
+
+.image-hover {
+    transition: transform .4s;
+    cursor: pointer;
+}
+
+.image-hover:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Define fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Define slide-up animation */
+@keyframes slide-up {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
