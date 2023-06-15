@@ -71,6 +71,14 @@ function Body() {
         };
     }, []);
 
+    const scrollToSection = (event, targetId) => {
+        event.preventDefault();
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
 
 
     return (
@@ -80,7 +88,7 @@ function Body() {
                 <div className="overlay">
                     <img src={ImgTitle} id="ImgTitle"></img>
                     <p id="PolarDescription"> Descubrí el <span style={{ color: "white", fontWeight: "bold" }}>poder</span> de la inmersión en frío y experimentá una <span style={{ color: "white", fontWeight: "bold" }}>recuperación</span> y un <span style={{ color: "white", fontWeight: "bold" }}>rendimiento</span> óptimo </p>
-                    <button id="ShopAllButton">Ver Productos </button>
+                    <button id="ShopAllButton" onClick={(event) => scrollToSection(event, 'Products')}>Ver Productos </button>
                 </div>
             </section>
 
@@ -99,19 +107,19 @@ function Body() {
                     <p id="BenefitsDescription">Los baños de inmersión en frío estimulan la circulación sanguinea y ayudan a eliminar el ácido láctico y otras toxinas acumuladas durante el ejercicio, lo que acelera el proceso de recuperación muscular.</p>
                     <img src={LogoRes} id="LogoBenefitsR"></img>
                     <p id="BenefitsTitle">Aumento de la resistencia</p>
-                    <p id="BenefitsDescription">Los baños fríos fortalecen el sistema cardiovascular, mejoran la resistencia y aumentan la capacidad del cuerpo para soportar el estrés físico./</p>
+                    <p id="BenefitsDescription">Los baños fríos fortalecen el sistema cardiovascular, mejoran la resistencia y aumentan la capacidad del cuerpo para soportar el estrés físico.</p>
 
                 </div>
                 <div id="BenefitsRight" className="hide">
                     <img src={LogoMood} id="LogoBenefits"></img>
                     <p id="BenefitsTitle">Mejora del estado de ánimo</p>
-                    <p id="BenefitsDescription">Sumergirse en agua fría después de entrenar ayuda a reducir la inflamación muscular, acelerar la recuperación y mejorar el rendimiento atlético en general.</p>
+                    <p id="BenefitsDescription">Sumergirse en agua fría estimula la liberación de endorfinas, hormonas responsables de mejorar el estado de ánimo y reducir el estrés.</p>
                     <img src={LogoMental} id="LogoBenefits"></img>
                     <p id="BenefitsTitle">Potenciación del enfoque mental</p>
-                    <p id="BenefitsDescription">Sumergirse en agua fría después de entrenar ayuda a reducir la inflamación muscular, acelerar la recuperación y mejorar el rendimiento atlético en general.</p>
+                    <p id="BenefitsDescription">Los baños fríos aumentan la alerta mental y la concentración, lo que te ayudará a estar más presente y enfocado durante tus actividades.</p>
                     <img src={LogoPlanta} id="LogoBenefits"></img>
                     <p id="BenefitsTitle">Estimulación del sistema inmunológico</p>
-                    <p id="BenefitsDescription">Sumergirse en agua fría después de entrenar ayuda a reducir la inflamación muscular, acelerar la recuperación y mejorar el rendimiento atlético en general.</p>
+                    <p id="BenefitsDescription">La exposición regular al frío fortalece el sistema inmunológico, lo que te permite mantenerte saludable y resistir mejor a las enfermedades.</p>
 
                 </div>
             </section>

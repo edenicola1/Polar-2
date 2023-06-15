@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600;700&display=swap');
 
 
 
 #BodyContainer {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Jost', sans-serif;
+
 }
 
 #Render {
@@ -21,7 +23,7 @@
 }
 
 #RenderImg {
-    width: 100%;
+    width: 105%;
     object-fit: cover;
     animation: fade-in 2s ease-in-out;
 }
@@ -91,7 +93,7 @@
 }
 
 #BannerBeneficios {
-    width: 100%;
+    width: 105%;
     height: auto;
 }
 
@@ -139,15 +141,26 @@
 #LogoBenefits {
     width: 15%;
     margin-bottom: -3%;
+    transition: transform 0.9s;
 }
 
 #LogoBenefitsR {
     width: 15%;
     margin-bottom: -3%;
     transform: rotate(270deg);
+    transition: transform 0.9s;
 
 }
 
+#LogoBenefits:hover {
+    transform: scale(1.2);
+    transform: rotate(360deg);
+}
+
+#LogoBenefitsR:hover {
+    transform: scale(1.2);
+    transform: rotate(630deg);
+}
 
 
 #BenefitsTitle {
@@ -212,6 +225,9 @@
     flex-direction: column;
     background-image: url('../Fondo.jpg');
     object-fit: cover;
+    width: 105%;
+    position: relative;
+    left: -3%;
 }
 
 #ProductsTitle {
@@ -330,6 +346,10 @@
     background-color: #121212;
     margin-top: 10%;
     z-index: 1;
+    width: 105.5%;
+    position: relative;
+    left: -3%;
+
 }
 
 #SocialsTitle {
