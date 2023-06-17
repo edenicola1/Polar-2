@@ -1,7 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600;700&display=swap');
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../neue-june/Matt Chansky - Neue June Light.otf') format('opentype'),
 
+        /* url('../neue-june/Matt Chansky - Neue June Demi.otf') format('opentype'),
+
+        url('../neue-june/Matt Chansky - Neue June Medium.otf') format('opentype'),
+        url('../neue-june/Matt Chansky - Neue June Regular.otf') format('opentype'),
+        url('../neue-june/Matt Chansky - Neue June Thin.otf') format('opentype'); */
+        /* Add more src lines if you have different font formats */
+}
+
+@font-face {
+    font-family: 'CustomFont-Bold';
+
+    src: url('../neue-june/Matt Chansky - Neue June Bold.otf') format('opentype'),
+        /* Add more src lines if you have different font formats */
+}
 
 
 #BodyContainer {
@@ -9,9 +23,9 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Jost', sans-serif;
 
 }
+
 
 #Render {
     display: flex;
@@ -28,6 +42,17 @@
     animation: fade-in 2s ease-in-out;
 }
 
+#gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 10%;
+}
+
 .overlay {
     position: absolute;
     top: 35%;
@@ -40,7 +65,6 @@
     padding: 0;
     height: 30%;
     width: 30%;
-    /* animation: slide-up 1s ease-in-out; */
 }
 
 #ImgTitle {
@@ -57,6 +81,11 @@
     position: relative;
     left: 25%;
     animation: slide-up 5s ease-in-out;
+    font-family: 'CustomFont', sans-serif;
+}
+
+#PolarDescription strong {
+    font-family: 'CustomFont-Bold', sans-serif;
 }
 
 #ShopAllButton {
@@ -71,6 +100,7 @@
     border-radius: 10px;
     left: 50%;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'CustomFont', sans-serif;
 }
 
 #ShopAllButton:hover {
@@ -90,6 +120,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 20%;
+    font-family: 'CustomFont', sans-serif;
 }
 
 #BannerBeneficios {
@@ -107,16 +138,17 @@
 }
 
 #BeneficiosTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
     margin-bottom: -3%;
-    font-weight: bold;
+    font-family: 'CustomFont-Bold', sans-serif;
 }
 
 #BeneficiosDescription {
-    font-size: 1.rem;
+    font-size: 1rem;
     color: white;
 }
+
 
 #BenefitsLeft {
     position: absolute;
@@ -228,17 +260,19 @@
     width: 105%;
     position: relative;
     left: -3%;
+    font-family: 'CustomFont', sans-serif;
 }
 
 #ProductsTitle {
-    font-size: 5vw;
+    font-size: 4.5vw;
     text-align: center;
     margin-top: 5%;
     color: #121212;
+    /* font-family: 'CustomFont-Bold', sans-serif; */
 }
 
 #ProductsDescription {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     margin-top: -5%;
     text-align: center;
     color: #121212;
@@ -253,35 +287,36 @@
 }
 
 #divProduct {
-    height: 45vh;
+    height: 55vh;
     margin-top: 15%;
     position: relative;
 
 }
 
 #fotoProduct1 {
-    height: 120%;
-    width: 75%;
-    margin-top: -15%;
+    height: 150%;
+    width: 110%;
+    margin-top: -25%;
+    margin-left: -5%;
 }
 
 #fotoProduct2 {
-    height: 75%;
-    width: 26%;
-    margin-top: -5%;
+    height: 105%;
+    width: 40%;
+    margin-top: -12%;
 
 }
 
 #fotoProduct3 {
-    height: 80%;
-    width: 28%;
-    margin-top: -5%;
+    height: 105%;
+    width: 40%;
+    margin-top: -12%;
 
 }
 
 .slide-legend {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 0;
     right: 0;
     color: #fff;
@@ -315,6 +350,9 @@
     /* Adjust the margin as needed */
 }
 
+#ProductTitle {
+    margin-top: 5%;
+}
 
 
 
@@ -322,7 +360,8 @@
 
 
 
-#Sorteo {
+
+#FAQs {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -330,7 +369,53 @@
     flex-direction: column;
     background-color: #121212;
     margin-top: 10%;
+    z-index: 1;
+    width: 105.5%;
+    position: relative;
+    left: -3%;
+    color: white;
+    font-family: 'CustomFont', sans-serif;
 }
+
+#FAQsTitle {
+    font-size: 5vw;
+    text-align: center;
+    color: white;
+    margin-top: -5%;
+
+}
+
+#Preguntas {
+    width: 36.5vw;
+    display: flex;
+    justify-content: center;
+    margin-top: -1%;
+
+    flex-direction: column
+}
+
+#FAQsPregunta {
+    text-align: start;
+    font-size: 1.5vw;
+}
+
+.faq-answer {
+    display: none;
+    text-align: justify;
+    font-size: 1.2vw;
+    color: grey;
+
+}
+
+.faq-question:hover {
+    cursor: pointer;
+
+}
+
+.faq-question.active .faq-answer {
+    display: block;
+}
+
 
 
 
@@ -349,6 +434,7 @@
     width: 105.5%;
     position: relative;
     left: -3%;
+    font-family: 'CustomFont', sans-serif;
 
 }
 
@@ -357,6 +443,7 @@
     text-align: center;
     color: white;
     margin-top: -2%;
+
 }
 
 #SocialsDescription {
@@ -370,6 +457,7 @@
     background-color: transparent;
     width: 8%;
     margin-bottom: -3%;
+    margin-left: -1%;
 }
 
 #DivFotos {
