@@ -46,13 +46,26 @@ function Body() {
         const productsDescription = document.getElementById('ProductsDescription');
         const productCarousel = document.getElementById('ProductCarousel');
 
+        const faqsSection = document.getElementById('FAQs');
+        const faqsTitle = document.getElementById('FAQsTitle');
+        const faqsQuestions = document.getElementById('Preguntas');
+
+        const socialSection = document.getElementById('PolarSocial');
+        const socialTitle = document.getElementById('SocialsTitle');
+        const socialDescription = document.getElementById('SocialsDescription');
+        const socialPics = document.getElementById('DivFotos');
+
+
+
         const handleScroll = () => {
             const scrollPosition = window.pageYOffset;
             const benefitsSectionTop = benefitsSection.offsetTop;
             const productsSectionTop = productsSection.offsetTop;
             const windowHeight = window.innerHeight;
+            const faqsSectionTop = faqsSection.offsetTop;
+            const socialSectionTop = socialSection.offsetTop;
 
-            if (scrollPosition > benefitsSectionTop - windowHeight / 1.2) {
+            if (scrollPosition > benefitsSectionTop - windowHeight / 1.3) {
                 title.classList.add('animate-title');
                 description.classList.add('animate-description');
                 benefitsLeft.classList.add('animate-left');
@@ -64,7 +77,7 @@ function Body() {
                 benefitsRight.classList.remove('animate-right');
             }
 
-            if (scrollPosition > productsSectionTop - windowHeight / 1.2) {
+            if (scrollPosition > productsSectionTop - windowHeight / 1.3) {
                 productsTitle.classList.add('animate-title');
                 productsDescription.classList.add('animate-description');
                 productCarousel.classList.add('animate-carousel');
@@ -73,6 +86,25 @@ function Body() {
                 productsDescription.classList.remove('animate-description');
                 productCarousel.classList.remove('animate-carousel');
             }
+
+            if (scrollPosition > faqsSectionTop - windowHeight / 1.3) {
+                faqsTitle.classList.add('animate-title');
+                faqsQuestions.classList.add('animate-description');
+            } else {
+                faqsTitle.classList.remove('animate-title');
+                faqsQuestions.classList.remove('animate-description');
+            }
+
+            if (scrollPosition > socialSectionTop - windowHeight / 1.3) {
+                socialTitle.classList.add('animate-title');
+                socialDescription.classList.add('animate-description');
+                socialPics.classList.add('animate-description');
+            } else {
+                socialTitle.classList.remove('animate-title');
+                socialDescription.classList.remove('animate-description');
+                socialPics.classList.remove('animate-description');
+            }
+
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -175,8 +207,8 @@ function Body() {
             </section>
 
             <section id="FAQs">
-                <p id="FAQsTitle">PREGUNTAS FRECUENTES</p>
-                <div id="Preguntas">
+                <p id="FAQsTitle" className="hide">PREGUNTAS FRECUENTES</p>
+                <div id="Preguntas" className="hide">
                     <div
                         className={`faq-question ${activeQuestion === 0 ? 'active' : ''}`}
                         onClick={() => handleQuestionClick(0)}
@@ -228,11 +260,11 @@ function Body() {
                 </div>
             </section>
 
-            <section id="PolarSocial">
-                <p id="SocialsTitle" > POLAR SOCIAL</p>
-                <p id="SocialsDescription" > Entrá a nuestro Instagram para ver el contenido de nuestros deportistas, coaches de salud y todos los usuarios de Polar! </p>
+            <section id="PolarSocial" >
+                <p id="SocialsTitle" className="hide"> POLAR SOCIAL</p>
+                <p id="SocialsDescription" className="hide"> Entrá a nuestro Instagram para ver el contenido de nuestros deportistas, coaches de salud y todos los usuarios de Polar! </p>
 
-                <div id="DivFotos">
+                <div id="DivFotos" className="hide">
                     <img src={Foto1} id="Foto1" className="image-hover" alt="Foto 1" />
                     <img src={Foto2} id="Foto2" className="image-hover" alt="Foto 2" />
                     <img src={Foto3} id="Foto3" className="image-hover" alt="Foto 3" />
