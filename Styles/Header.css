@@ -39,9 +39,9 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 10%;
-    margin-left: -65%;
-    font-size: 1.3vw;
+    gap: 5%;
+    margin-left: -43%;
+    font-size: 1.1vw;
     color: white;
 }
 
@@ -85,8 +85,9 @@ header {
 }
 
 .nav-links.scroll-left {
-    transform: translateX(-58%);
+    transform: translateX(-28%);
     /* Adjust the value as per your requirement */
+    font-size: 1.2vw;
 }
 
 .nav-links.scroll-left li a::before {
