@@ -64,8 +64,13 @@ const Header = ({ background }) => {
                         </a>
                     </li>
                     <li>
-                        <a href="/" onClick={(event) => scrollToSection(event, 'about-us')}>
+                        <a >
                             SOBRE NOSOTROS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" onClick={(event) => scrollToSection(event, 'FAQs')}>
+                            PREGUNTAS FRECUENTES
                         </a>
                     </li>
                 </ul>
