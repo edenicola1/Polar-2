@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/Header.css';
 import Logo from '../Logotype 2-02.png';
+import Cross from '../close_FILL0_wght400_GRAD0_opsz48.svg'
 
 const Header = ({ background }) => {
     const [scrollBackground, setScrollBackground] = useState(false);
     const [scrollLeft, setScrollLeft] = useState(false);
+    const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,9 +40,17 @@ const Header = ({ background }) => {
         window.location.href = window.location.origin + window.location.pathname;
     };
 
+    const openModal = () => {
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
 
     return (
         <header style={{ backgroundColor: background }}>
+            {/* Header Logo */}
             <img
                 src={Logo}
                 id="HeaderLogo"
@@ -48,10 +58,11 @@ const Header = ({ background }) => {
                 onClick={handleLogoClick}
                 style={{ cursor: 'pointer' }}
             />
+
+            {/* Navigation Links */}
             <nav>
                 <ul
-                    className={`nav-links ${scrollBackground ? 'black' : ''} ${scrollLeft ? 'scroll-left' : ''
-                        }`}
+                    className={`nav-links ${scrollBackground ? 'black' : ''} ${scrollLeft ? 'scroll-left' : ''}`}
                 >
                     <li>
                         <a href="/" onClick={(event) => scrollToSection(event, 'Benefits')}>
@@ -64,7 +75,7 @@ const Header = ({ background }) => {
                         </a>
                     </li>
                     <li>
-                        <a >
+                        <a onClick={openModal}>
                             SOBRE NOSOTROS
                         </a>
                     </li>
@@ -75,6 +86,24 @@ const Header = ({ background }) => {
                     </li>
                 </ul>
             </nav>
+
+            {/* Modal */}
+            {showModal && (
+                <div id="Modal">
+                    <div className="ModalContent">
+                        <p id="ModalTitle">SOBRE NOSOTROS</p>
+                        <p id="ModalText">
+                            Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país.
+
+                            Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando el instrumento vital para empezar en este camino.
+
+                            Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada, donde juntos podemos crear un impacto positivo en el mundo del bienestar y marcar la diferencia en la vida de las personas.</p>
+
+                        <img src={Cross} id="Cross" onClick={closeModal}></img>
+
+                    </div>
+                </div>
+            )}
         </header>
     );
 };

@@ -1,21 +1,13 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('../neue-june/Matt Chansky - Neue June Light.otf') format('opentype'),
-
-        /* url('../neue-june/Matt Chansky - Neue June Demi.otf') format('opentype'),
-
-        url('../neue-june/Matt Chansky - Neue June Medium.otf') format('opentype'),
-        url('../neue-june/Matt Chansky - Neue June Regular.otf') format('opentype'),
-        url('../neue-june/Matt Chansky - Neue June Thin.otf') format('opentype'); */
-        /* Add more src lines if you have different font formats */
+    src: url('../neue-june/Matt Chansky - Neue June Light.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'CustomFont-Bold';
-
-    src: url('../neue-june/Matt Chansky - Neue June Bold.otf') format('opentype'),
-        /* Add more src lines if you have different font formats */
+    src: url('../neue-june/Matt Chansky - Neue June Bold.otf') format('opentype');
 }
+
 
 
 #BodyContainer {
@@ -144,7 +136,7 @@
     font-size: 3.3vw;
     color: white;
     margin-bottom: -3%;
-    font-family: 'CustomFont-Bold', sans-serif;
+    font-family: 'CustomFont', sans-serif;
 }
 
 #BeneficiosDescription {
@@ -365,7 +357,7 @@
 
 
 #FAQs {
-    height: 103vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -385,7 +377,7 @@
     text-align: center;
     color: white;
     position: sticky;
-    margin-top: -3%;
+    margin-top: -1%;
 }
 
 #Preguntas {

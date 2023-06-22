@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../neue-june/Matt Chansky - Neue June Light.otf') format('opentype'),
+        url('../neue-june/Matt Chansky - Neue June Bold.otf') format('opentype'),
+        url('../neue-june/Matt Chansky - Neue June Demi.otf') format('opentype'),
+
+        url('../neue-june/Matt Chansky - Neue June Medium.otf') format('opentype'),
+        url('../neue-june/Matt Chansky - Neue June Regular.otf') format('opentype'),
+        url('../neue-june/Matt Chansky - Neue June Thin.otf') format('opentype');
+    /* Add more src lines if you have different font formats */
+}
+
 footer {
     height: 60vh;
     background-color: white;
@@ -7,7 +19,7 @@ footer {
     color: black;
     transition: transform 0.7s ease;
     transform: translateY(100%);
-    font-family: 'Jost', sans-serif;
+    font-family: 'CustomFont', sans-serif;
 }
 
 #FooterContainer.animate-footer {
@@ -20,7 +32,7 @@ footer {
     flex-direction: row;
     padding-top: 4%;
     opacity: 0;
-    margin-left: 2%;
+    margin-left: 3%;
     transition: opacity 1.5s ease;
 }
 
